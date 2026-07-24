@@ -333,7 +333,7 @@
       <button class="btn-ghost" id="resetScoreBtn">Zerar placar</button>
     </div>
 
-    <footer class="credit">feito para jogar com quem você gosta ✦</footer>
+    <footer class="credit">✦ feito para jogar com quem você gosta ✦</footer>
   </div>
 
 </div>
@@ -449,10 +449,10 @@
     roomRef.transaction(room => {
       if(!room){
         room = {
-          board: Array(9).fill(null),
+          board: Array(9).fill(""),
           turn: 'X',
           status: 'waiting',
-          winner: null,
+          winner: "",
           winLine: null,
           score: { X: 0, O: 0, draws: 0 },
           thinking: { X: false, O: false },
@@ -601,9 +601,9 @@
   document.getElementById('restartBtn').onclick = () => {
     roomRef.transaction(room => {
       if(!room) return room;
-      room.board = Array(9).fill(null);
+      room.board = Array(9).fill("");
       room.status = (room.players && room.players.X && room.players.O) ? 'playing' : 'waiting';
-      room.winner = null;
+      room.winner = "";
       room.winLine = null;
       room.turn = room.turn === 'X' ? 'O' : 'X';
       room.thinking = { X:false, O:false };
@@ -680,7 +680,7 @@
     }
 
     // tabuleiro
-    const board = room.board || Array(9).fill(null);
+    const board = room.board || Array(9).fill("");
     const cells = document.querySelectorAll('#board .cell');
     cells.forEach((cell, i) => {
       const val = board[i];
