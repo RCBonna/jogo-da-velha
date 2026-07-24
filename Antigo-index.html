@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>Jogo da Velha Online</title>
+<title>Jogo da Velha online</title>
 
 <!--
   ============================================================================
@@ -193,7 +193,7 @@
     cursor:pointer; user-select:none; -webkit-tap-highlight-color: transparent;
     transition: background .15s, border-color .15s, transform .1s;
   }
-  .cell:hover:not(.filled):not(.disabled){ border-color: var(--accent-blue); }
+  .cell:hover:not(.filled){ border-color: var(--accent-blue); }
   .cell:active:not(.filled){ transform: scale(0.96); }
   .cell.filled{ cursor:default; }
   .cell.x{ color: var(--x-color); text-shadow: 0 0 18px rgba(79,209,255,0.5); }
@@ -254,7 +254,7 @@
 
   <!-- TELA DE CONFIGURAÇÃO AUSENTE -->
   <div id="setupScreen" class="card hidden">
-    <h1>Falta configurar</h1>
+    <h1>Falta configurar .... </h1>
     <p class="subtitle">
       Este arquivo ainda não tem as chaves do Firebase. Abra o HTML num
       editor de texto, procure por <code>COLE SEU firebaseConfig AQUI</code>
